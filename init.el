@@ -19,3 +19,8 @@
 (require 'fill-column-indicator)
 (setq-default fci-rule-column 80)
 (add-hook 'prog-mode-hook 'fci-mode) ; enable fci-mode in program mode
+
+;; install auto-complete if not and enable it
+(unless (package-installed-p 'auto-complete)
+  (package-install 'auto-complete))
+(ac-config-default) ; enable auto-complete
