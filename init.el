@@ -5,6 +5,7 @@
 (xterm-mouse-mode) ; enable mouse
 (setq-default major-mode 'text-mode) ; set default mode as text mode
 (global-set-key "\C-x\C-b" 'buffer-menu) ; list buffers in current windows
+(menu-bar-mode 0) ; disable menu bar
 
 ;; add melpa package source
 (require 'package)
