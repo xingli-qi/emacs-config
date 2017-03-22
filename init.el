@@ -8,6 +8,12 @@
 (setq-default Buffer-menu-name-width 40) ; set buffer name field width to 40
 (menu-bar-mode 0) ; disable menu bar
 
+;; c/c++ related settings
+(setq-default c-basic-offset 4)
+(show-paren-mode t) ; show matching parenthesis
+(c-set-offset 'innamespace 0) ; don't indent for namespace
+(c-set-offset 'access-label -2) ; private, public etc. indented by 2 spaces
+
 ;; add melpa package source
 (require 'package)
 (add-to-list 'package-archives
