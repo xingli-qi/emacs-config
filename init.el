@@ -25,3 +25,10 @@
 (unless (package-installed-p 'auto-complete)
   (package-install 'auto-complete))
 (ac-config-default) ; enable auto-complete
+
+;; install sr-speedbar if not and configure
+(unless (package-installed-p 'sr-speedbar)
+  (package-install 'sr-speedbar))
+(setq-default sr-speedbar-width 40)
+(setq-default sr-speedbar-max-width 40)
+(setq-default sr-speedbar-right-side nil)
