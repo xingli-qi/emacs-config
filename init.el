@@ -7,6 +7,8 @@
 (global-set-key "\C-x\C-b" 'buffer-menu) ; list buffers in current windows
 (setq-default Buffer-menu-name-width 40) ; set buffer name field width to 40
 (menu-bar-mode 0) ; disable menu bar
+(electric-pair-mode); toggle auto pair parenthesis interstion
+(which-func-mode); display the top-level function name where the cursor is 
 
 ;; c/c++ related settings
 (setq-default c-basic-offset 4)
