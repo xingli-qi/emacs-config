@@ -6,7 +6,8 @@
 (setq-default major-mode 'text-mode) ; set default mode as text mode
 (global-set-key "\C-x\C-b" 'buffer-menu) ; list buffers in current windows
 (setq-default Buffer-menu-name-width 40) ; set buffer name field width to 40
-(menu-bar-mode 0) ; disable menu bar
+;(menu-bar-mode 0) ; disable menu bar
+(tool-bar-mode 0) ; disable tool bar
 (electric-pair-mode); toggle auto pair parenthesis interstion
 (which-func-mode); display the top-level function name where the cursor is 
 
