@@ -9,7 +9,11 @@
 ;(menu-bar-mode 0) ; disable menu bar
 (tool-bar-mode 0) ; disable tool bar
 (electric-pair-mode); toggle auto pair parenthesis interstion
-(which-func-mode); display the top-level function name where the cursor is 
+(which-func-mode); display the top-level function name where the cursor is
+
+;; default frame size
+(add-to-list 'default-frame-alist '(height . 30))
+(add-to-list 'default-frame-alist '(width . 85))
 
 ;; c/c++ related settings
 (setq-default c-basic-offset 4)
@@ -48,7 +52,7 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (misterioso)))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -56,4 +60,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#2d3743" :foreground "#e1e1e0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Bitstream Vera Sans Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "#2d3743" :foreground "#e1e1e0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 180 :width normal :foundry "nil" :family "Courier New")))))
