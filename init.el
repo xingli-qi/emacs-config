@@ -27,6 +27,16 @@
 	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+;; install ggtags if not, configure and eanble it.
+(unless (package-installed-p 'ggtags)
+  (package-install 'ggtags))
+(require 'ggtags)
+;; enable ggtags in c/c++/java mode
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
+
 ;; install fill-column-indicator if not, configure and eanble it.
 (unless (package-installed-p 'fill-column-indicator)
   (package-install 'fill-column-indicator))
